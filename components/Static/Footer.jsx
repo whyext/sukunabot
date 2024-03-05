@@ -39,18 +39,18 @@ export default function Footer() {
                                 <Link href="https://top.gg/bot/774043716797071371/vote">
                                     <a className="text-white/50 hover:text-white hover:underline transform duration-200">
                                     <i className={`fa-brands fa fa-globe`} /> Vote
-                                        
                                     </a>
                                 </Link>
                             </div>
                             <div>
                                 <a href="https://discord.gg/ZcDprCrFTn" target="_blank" className="text-white/50 hover:text-white hover:underline transform duration-200">
-                                    Destek Sunucu
+                                <i className={`fa-brands fa fa-`} /> Destek Sunucu
                                 </a>
                             </div>
                             <div>
                                 <a href="https://discord.com/api/oauth2/authorize?client_id=774043716797071371&permissions=277028620608&scope=applications.commands%20bot" target="_blank" className="text-white/50 hover:text-white hover:underline transform duration-200">
-                                    Davet et
+                                <i className={`fa-brands fa fa-spin`} /> Davet Et
+                                <span class="sr-only">Loading...</span>
                                 </a>
                             </div>
                         </div>
