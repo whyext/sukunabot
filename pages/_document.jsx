@@ -26,10 +26,10 @@ class MyDocument extends Document {
           />
           <meta
             property="og:description"
-            content="How about listening to music without pausing? Create your own playlists with 750+ supported sound platforms and start listening."
+            content="Moderasyon ve Eğlence Platformu'nda müziğin tadını kesintisiz çıkarmak için kendi çalma listelerinizi oluşturun ve 750'den fazla desteklenen ses platformunda dinlemeye başlayın."
           />
           <meta property="og:image" content="/img/logo.jpg" />
-          <meta property="og:image:alt" content="MusicMaker" />
+          <meta property="og:image:alt" content="Sukuna Bot" />
           <meta property="og:locale" content="en_GB" />
           <meta
             property="og:site_name"
