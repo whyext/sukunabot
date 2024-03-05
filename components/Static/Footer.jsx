@@ -101,11 +101,11 @@ export default function Footer() {
                         </p>
                         <div className="hidden md:flex items-center justify-center">
                                 <p className={"text-xs text-green-400"}>
-                                    Bot Online
+                                    Bot Aktif
                                 </p>
                         </div>
                         <p className="text-white text-center sm:text-right text-opacity-50">
-                            {"Powered by Nodesty ❤️"}
+                            {"Powered by Whydow ❤️"}
                         </p>
                     </div>
                 </div>
