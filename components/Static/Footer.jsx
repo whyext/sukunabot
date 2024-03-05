@@ -70,9 +70,9 @@ export default function Footer() {
                                 </Link>
                             </div>
                             <div>
-                                <Link href="https://youtube.com/whydow">
+                                <Link href="https://www.instagram.com/whyext_/">
                                     <a className="text-white/50 hover:text-white hover:underline transform duration-200">
-                                    <i className={`fa-brands fa-youtube`} /> YouTube 
+                                    <i className={`fa-brands fa-instagram`} /> Instagram 
                                     </a>
                                 </Link>
                             </div>
