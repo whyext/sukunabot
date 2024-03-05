@@ -47,8 +47,8 @@ const Header = ({ $, NavItems }) => {
         { id: 'violet', color: 'violet', label: 'Mor' },
         { id: 'blue', color: 'blue', label: 'Mavi' },
         { id: 'emerald', color: 'emerald', label: 'Yeşil' },
-        { id: 'rose', color: 'rose', label: 'Pembe' },
-        { id: 'amber', color: 'amber', label: 'Kırmızı' },
+        { id: 'rose', color: 'rose', label: 'Kırmızı' },
+        { id: 'amber', color: 'amber', label: 'Turuncu' },
     ];
    
     const ChangeColor = id => {
