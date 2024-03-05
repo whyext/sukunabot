@@ -38,7 +38,8 @@ export default function Footer() {
                             <div>
                                 <Link href="https://top.gg/bot/774043716797071371/vote">
                                     <a className="text-white/50 hover:text-white hover:underline transform duration-200">
-                                        Vote Bot
+                                    <i className={`fa-brands fa fa-globe`} /> Vote
+                                        
                                     </a>
                                 </Link>
                             </div>
