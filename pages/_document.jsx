@@ -30,7 +30,7 @@ class MyDocument extends Document {
           />
           <meta property="og:image" content="/img/logo.jpg" />
           <meta property="og:image:alt" content="Sukuna Bot" />
-          <meta property="og:locale" content="en_GB" />
+          <meta property="og:locale" content="tr_TR" />
           <meta
             property="og:site_name"
             content="Sukuna Bot"
