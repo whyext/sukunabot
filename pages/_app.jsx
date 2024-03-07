@@ -37,7 +37,7 @@ export default function AwardApp({ Component, pageProps }) {
       name: "Destek",
       icon: "fab fa-discord",
       activeIcon: "fab fa-discord",
-      href: "https://discord.gg/ZcDprCrFTn",
+      href: "https://discord.gg/whydow",
     },
     {
       link: true,
