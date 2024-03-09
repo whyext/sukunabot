@@ -1,15 +1,8 @@
 import Link from "next/link";
 import { Menu } from '@headlessui/react';
 import { ChevronDownIcon } from '@heroicons/react/solid';
-import { useState } from 'react'; // useState ekleyin
 
 export default function Footer() {
-    const [selectedLanguage, setSelectedLanguage] = useState('tr'); // Dil durumunu ve işlevi ekleyin
-
-    // Dil değiştirme işlevi
-    const handleLanguageChange = (language) => {
-        setSelectedLanguage(language);
-    };
 
     return (
         <>
@@ -25,64 +18,22 @@ export default function Footer() {
                                 <div>
                                     <Menu.Button className="flex z-1 items-center w-full px-4 py-2 text-sm font-medium text-white bg-black rounded-md bg-opacity-20 hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
                                         <img
-                                            src={`https://flagcdn.com/w80/${selectedLanguage}.png`}
+                                            src={`https://flagcdn.com/w80/tr.png`}
                                             width="24"
                                             height="18"
                                             className="mr-2 h-4 rounded-sm"
                                         />
-                                        {selectedLanguage === 'tr' ? 'Türkçe' : 'English'}
+                                        Türkçe
                                         <ChevronDownIcon
                                             className="w-5 h-5 ml-2 -mr-1 transform rotate-180 text-violet-200 hover:text-violet-100"
                                             aria-hidden="true"
                                         />
                                     </Menu.Button>
                                 </div>
-                                <Menu.Items className="absolute right-0 mt-2 w-40 origin-top-right bg-white divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-                                    <Menu.Item>
-                                        {({ active }) => (
-                                            <Link href="en">
-                                                <a
-                                                    onClick={() => handleLanguageChange('en')} // Dil değiştirme işlevini çağırın
-                                                    className={`${
-                                                        active ? 'bg-gray-100 text-gray-900' : 'text-gray-900'
-                                                        } group flex items-center w-full px-2 py-2 text-sm`}
-                                                >
-                                                    <img
-                                                        src={`https://flagcdn.com/w80/gb.png`}
-                                                        width="24"
-                                                        height="18"
-                                                        className="mr-2 h-4 rounded-sm"
-                                                    />
-                                                    English
-                                                </a>
-                                            </Link>
-                                        )}
-                                    </Menu.Item>
-                                    <Menu.Item>
-                                        {({ active }) => (
-                                            <Link href="tr">
-                                                <a
-                                                    onClick={() => handleLanguageChange('tr')} // Dil değiştirme işlevini çağırın
-                                                    className={`${
-                                                        active ? 'bg-gray-100 text-gray-900' : 'text-gray-900'
-                                                        } group flex items-center w-full px-2 py-2 text-sm`}
-                                                >
-                                                    <img
-                                                        src={`https://flagcdn.com/w80/tr.png`}
-                                                        width="24"
-                                                        height="18"
-                                                        className="mr-2 h-4 rounded-sm"
-                                                    />
-                                                    Türkçe
-                                                </a>
-                                            </Link>
-                                        )}
-                                    </Menu.Item>
-                                </Menu.Items>
                             </Menu>
                         </div>
                         <div className="col-span-1">
-                            <p className="text-white font-medium mt-3 sm:mt-0 sm:mb-3">Links</p>
+                            <p className="text-white font-medium mt-3 sm:mt-0 sm:mb-3">Linkler</p>
                             <div>
                                 <Link href="#">
                                     <a className="text-white/50 hover:text-white hover:underline transform duration-200">
@@ -102,7 +53,7 @@ export default function Footer() {
                             </div>
                         </div>
                         <div className="col-span-1">
-                            <p className="text-white font-medium mt-3 sm:mt-0 sm:mb-3">Social Media</p>
+                            <p className="text-white font-medium mt-3 sm:mt-0 sm:mb-3">Sosyal Medya</p>
                             <div>
                                 <Link href="https://discord.gg/whydow">
                                     <a className="text-white/50 hover:text-white hover:underline transform duration-200">
@@ -125,15 +76,22 @@ export default function Footer() {
                                 </Link>
                             </div>
                         </div>
-                        </div>
                         <div className="col-span-1">
-                            <p className="text-white font-medium mt-3 sm:mt-0 sm:mb-3">Important</p>
+                            <p className="text-white font-medium mt-3 sm:mt-0 sm:mb-3">Önemli</p>
                             <div>
                                 <Link href="/tos">
                                     <a className="text-white/50 hover:text-white hover:underline transform duration-200">
                                         Kullanım Şartları
                                     </a>
-                                </Link>                            
+                                </Link>
+                            </div>
+                            <div>
+                                <Link href="/privacy">
+                                    <a className="text-white/50 hover:text-white hover:underline transform duration-200">
+                                        Gizlilik Politikası
+                                    </a>
+                                </Link>
+                            </div>
                         </div>
                     </div>
                     <div className="mt-10 grid content-center grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
@@ -142,17 +100,7 @@ export default function Footer() {
                         </p>
                         <div className="hidden md:flex items-center justify-center">
                                 <p className={"text-xs text-green-400"}>
-                                    Bot Active
-                                </p>
-                        </div>
-                    </div>
-                    <div className="mt-10 grid content-center grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
-                        <p className="text-white text-center sm:text-left text-opacity-50">
-                            {new Date().getFullYear()} &copy; Sukuna
-                        </p>
-                        <div className="hidden md:flex items-center justify-center">
-                                <p className={"text-xs text-green-400"}>
-                                    Bot Active
+                                    Bot Aktif
                                 </p>
                         </div>
                         <p className="text-white text-center sm:text-right text-opacity-50">
