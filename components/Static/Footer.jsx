@@ -40,7 +40,7 @@ export default function Footer() {
                                 <Menu.Items className="absolute right-0 mt-2 w-40 origin-top-right bg-white divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                                     <Menu.Item>
                                         {({ active }) => (
-                                            <Link href="#">
+                                            <Link href="en">
                                                 <a
                                                     onClick={() => handleLanguageChange('en')} // Dil değiştirme işlevini çağırın
                                                     className={`${
@@ -48,7 +48,7 @@ export default function Footer() {
                                                         } group flex items-center w-full px-2 py-2 text-sm`}
                                                 >
                                                     <img
-                                                        src={`https://flagcdn.com/w80/en.png`}
+                                                        src={`https://flagcdn.com/w80/gb.png`}
                                                         width="24"
                                                         height="18"
                                                         className="mr-2 h-4 rounded-sm"
