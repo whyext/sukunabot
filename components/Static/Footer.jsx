@@ -30,38 +30,68 @@ export default function Footer() {
                                         />
                                     </Menu.Button>
                                 </div>
-                                <Menu.Items className="absolute right-0 mt-2 w-40 origin-top-right bg-white divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-                                    <Menu.Item>
-                                        {({ active }) => (
-                                            <Link href="#">
-                                                <a className={`${
-                                                    active ? 'bg-gray-100 text-gray-900' : 'text-gray-900'
-                                                    } group flex items-center w-full px-2 py-2 text-sm`}>
-                                                    <img
-                                                        src={`https://flagcdn.com/w80/gb.png`}
-                                                        width="24"
-                                                        height="18"
-                                                        className="mr-2 h-4 rounded-sm"
-                                                    />
-                                                    English
-                                                </a>
-                                            </Link>
-                                        )}
-                                    </Menu.Item>
-                                </Menu.Items>
-                            </Menu>
+                            </Menu>                        
                         </div>
                         <div className="col-span-1">
-                            <p className="text-white font-medium mt-3 sm:mt-0 sm:mb-3">Links</p>
-                            {/* Linkler burada */}
+                            <p className="text-white font-medium mt-3 sm:mt-0 sm:mb-3">Linkler</p>
+                            <div>
+                                <Link href="#">
+                                    <a className="text-white/50 hover:text-white hover:underline transform duration-200">
+                                    <i className={`fa-brands fa fa-globe`} /> Vote
+                                    </a>
+                                </Link>
+                            </div>
+                            <div>
+                                <a href="https://discord.gg/ZcDprCrFTn" target="_blank" className="text-white/50 hover:text-white hover:underline transform duration-200">
+                                <i className={`fa-brands fa fa-compass`} /> Destek
+                                </a>
+                            </div>
+                            <div>
+                                <a href="https://discord.com/api/oauth2/authorize?client_id=774043716797071371&permissions=277028620608&scope=applications.commands%20bot" target="_blank" className="text-white/50 hover:text-white hover:underline transform duration-200">
+                                <i className={`fa-brands fa fa-gift`} /> Davet Et
+                                </a>
+                            </div>
                         </div>
                         <div className="col-span-1">
-                            <p className="text-white font-medium mt-3 sm:mt-0 sm:mb-3">Social Media</p>
-                            {/* Sosyal medya linkleri burada */}
+                            <p className="text-white font-medium mt-3 sm:mt-0 sm:mb-3">Sosyal Medya</p>
+                            <div>
+                                <Link href="https://discord.gg/whydow">
+                                    <a className="text-white/50 hover:text-white hover:underline transform duration-200">
+                                    <i className={`fa-brands fa-discord`} /> Discord
+                                    </a>
+                                </Link>
+                            </div>
+                            <div>
+                                <Link href="https://github.com/whyext">
+                                    <a className="text-white/50 hover:text-white hover:underline transform duration-200">
+                                    <i className={`fa-brands fa-github`} /> GitHub 
+                                    </a>
+                                </Link>
+                            </div>
+                            <div>
+                                <Link href="https://www.instagram.com/whyext_/">
+                                    <a className="text-white/50 hover:text-white hover:underline transform duration-200">
+                                    <i className={`fa-brands fa-instagram`} /> Instagram 
+                                    </a>
+                                </Link>
+                            </div>
                         </div>
                         <div className="col-span-1">
-                            <p className="text-white font-medium mt-3 sm:mt-0 sm:mb-3">Important</p>
-                            {/* Önemli linkler burada */}
+                            <p className="text-white font-medium mt-3 sm:mt-0 sm:mb-3">Önemli</p>
+                            <div>
+                                <Link href="/tos">
+                                    <a className="text-white/50 hover:text-white hover:underline transform duration-200">
+                                        Kullanım Şartları
+                                    </a>
+                                </Link>
+                            </div>
+                            <div>
+                                <Link href="/privacy">
+                                    <a className="text-white/50 hover:text-white hover:underline transform duration-200">
+                                        Gizlilik Politikası
+                                    </a>
+                                </Link>
+                            </div>
                         </div>
                     </div>
                     <div className="mt-10 grid content-center grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
@@ -70,7 +100,7 @@ export default function Footer() {
                         </p>
                         <div className="hidden md:flex items-center justify-center">
                                 <p className={"text-xs text-green-400"}>
-                                    Bot Active
+                                    Bot Aktif
                                 </p>
                         </div>
                         <p className="text-white text-center sm:text-right text-opacity-50">
