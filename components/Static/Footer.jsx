@@ -30,30 +30,7 @@ export default function Footer() {
                                         />
                                     </Menu.Button>
                                 </div>
-                            </Menu>
-                                <Menu.Items className="absolute right-0 w-48 mt-2 origin-top-right bg-white divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-        <div className="px-1 py-1 ">
-            <Menu.Item>
-                {({ active }) => (
-                    <button
-                        className={`${
-                            active ? 'bg-gray-100 text-gray-900' : 'text-gray-700'
-                        } group flex rounded-md items-center w-full px-2 py-2 text-sm`}
-                    >
-                        <img
-                            src={`https://flagcdn.com/w80/us.png`}
-                            width="24"
-                            height="18"
-                            className="mr-2 h-4 rounded-sm"
-                        />
-                        English
-                    </button>
-                )}
-            </Menu.Item>
-        </div>
-    </Menu.Items>
-</Menu>
-                        
+                            </Menu>                        
                         </div>
                         <div className="col-span-1">
                             <p className="text-white font-medium mt-3 sm:mt-0 sm:mb-3">Linkler</p>
