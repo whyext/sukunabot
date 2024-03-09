@@ -30,10 +30,29 @@ export default function Footer() {
                                         />
                                     </Menu.Button>
                                 </div>
-                            </Menu>                        
+                                <Menu.Items className="absolute right-0 mt-2 w-40 origin-top-right bg-white divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                                    <Menu.Item>
+                                        {({ active }) => (
+                                            <Link href="#">
+                                                <a className={`${
+                                                    active ? 'bg-gray-100 text-gray-900' : 'text-gray-900'
+                                                    } group flex items-center w-full px-2 py-2 text-sm`}>
+                                                    <img
+                                                        src={`https://flagcdn.com/w80/gb.png`}
+                                                        width="24"
+                                                        height="18"
+                                                        className="mr-2 h-4 rounded-sm"
+                                                    />
+                                                    English
+                                                </a>
+                                            </Link>
+                                        )}
+                                    </Menu.Item>
+                                </Menu.Items>
+                            </Menu>
                         </div>
                         <div className="col-span-1">
-                            <p className="text-white font-medium mt-3 sm:mt-0 sm:mb-3">Linkler</p>
+                            <p className="text-white font-medium mt-3 sm:mt-0 sm:mb-3">Links</p>
                             <div>
                                 <Link href="#">
                                     <a className="text-white/50 hover:text-white hover:underline transform duration-200">
@@ -53,7 +72,7 @@ export default function Footer() {
                             </div>
                         </div>
                         <div className="col-span-1">
-                            <p className="text-white font-medium mt-3 sm:mt-0 sm:mb-3">Sosyal Medya</p>
+                            <p className="text-white font-medium mt-3 sm:mt-0 sm:mb-3">Social Media</p>
                             <div>
                                 <Link href="https://discord.gg/whydow">
                                     <a className="text-white/50 hover:text-white hover:underline transform duration-200">
@@ -76,22 +95,15 @@ export default function Footer() {
                                 </Link>
                             </div>
                         </div>
+                        </div>
                         <div className="col-span-1">
-                            <p className="text-white font-medium mt-3 sm:mt-0 sm:mb-3">Önemli</p>
+                            <p className="text-white font-medium mt-3 sm:mt-0 sm:mb-3">Important</p>
                             <div>
                                 <Link href="/tos">
                                     <a className="text-white/50 hover:text-white hover:underline transform duration-200">
                                         Kullanım Şartları
                                     </a>
-                                </Link>
-                            </div>
-                            <div>
-                                <Link href="/privacy">
-                                    <a className="text-white/50 hover:text-white hover:underline transform duration-200">
-                                        Gizlilik Politikası
-                                    </a>
-                                </Link>
-                            </div>
+                                </Link>                            
                         </div>
                     </div>
                     <div className="mt-10 grid content-center grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
@@ -100,7 +112,7 @@ export default function Footer() {
                         </p>
                         <div className="hidden md:flex items-center justify-center">
                                 <p className={"text-xs text-green-400"}>
-                                    Bot Aktif
+                                    Bot Active
                                 </p>
                         </div>
                         <p className="text-white text-center sm:text-right text-opacity-50">
