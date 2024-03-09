@@ -14,16 +14,14 @@ export default function Footer() {
                                 <img src="/img/logo2.png" className="rounded-full w-12" />
                                 <p className="font-semibold text-xl text-white">Sukuna Bot</p>
                             </div>
-                            <Menu as="div" className="relative mt-3 inline-block text-left">
-                                <div>
                                     <Menu.Button className="flex z-1 items-center w-full px-4 py-2 text-sm font-medium text-white bg-black rounded-md bg-opacity-20 hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
                                         <img
-                                            src={`https://flagcdn.com/w80/tr.png`}
+                                            src={`https://flagcdn.com/w80/${selectedLanguage}.png`}
                                             width="24"
                                             height="18"
                                             className="mr-2 h-4 rounded-sm"
                                         />
-                                        Türkçe
+                                        {selectedLanguage === 'tr' ? 'Türkçe' : 'English'}
                                         <ChevronDownIcon
                                             className="w-5 h-5 ml-2 -mr-1 transform rotate-180 text-violet-200 hover:text-violet-100"
                                             aria-hidden="true"
@@ -33,12 +31,15 @@ export default function Footer() {
                                 <Menu.Items className="absolute right-0 mt-2 w-40 origin-top-right bg-white divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                                     <Menu.Item>
                                         {({ active }) => (
-                                            <Link href="en">
-                                                <a className={`${
-                                                    active ? 'bg-gray-100 text-gray-900' : 'text-gray-900'
-                                                    } group flex items-center w-full px-2 py-2 text-sm`}>
+                                            <Link href="#">
+                                                <a
+                                                    onClick={() => handleLanguageChange('en')}
+                                                    className={`${
+                                                        active ? 'bg-gray-100 text-gray-900' : 'text-gray-900'
+                                                        } group flex items-center w-full px-2 py-2 text-sm`}
+                                                >
                                                     <img
-                                                        src={`https://flagcdn.com/w80/gb.png`}
+                                                        src={`https://flagcdn.com/w80/en.png`}
                                                         width="24"
                                                         height="18"
                                                         className="mr-2 h-4 rounded-sm"
@@ -48,9 +49,30 @@ export default function Footer() {
                                             </Link>
                                         )}
                                     </Menu.Item>
+                                    <Menu.Item>
+                                        {({ active }) => (
+                                            <Link href="#">
+                                                <a
+                                                    onClick={() => handleLanguageChange('tr')}
+                                                    className={`${
+                                                        active ? 'bg-gray-100 text-gray-900' : 'text-gray-900'
+                                                        } group flex items-center w-full px-2 py-2 text-sm`}
+                                                >
+                                                    <img
+                                                        src={`https://flagcdn.com/w80/tr.png`}
+                                                        width="24"
+                                                        height="18"
+                                                        className="mr-2 h-4 rounded-sm"
+                                                    />
+                                                    Türkçe
+                                                </a>
+                                            </Link>
+                                        )}
+                                    </Menu.Item>
                                 </Menu.Items>
                             </Menu>
                         </div>
+
                         <div className="col-span-1">
                             <p className="text-white font-medium mt-3 sm:mt-0 sm:mb-3">Links</p>
                             <div>
