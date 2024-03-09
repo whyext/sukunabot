@@ -60,7 +60,7 @@ export default function Footer() {
                                     </Menu.Item>
                                     <Menu.Item>
                                         {({ active }) => (
-                                            <Link href="#">
+                                            <Link href="tr">
                                                 <a
                                                     onClick={() => handleLanguageChange('tr')} // Dil değiştirme işlevini çağırın
                                                     className={`${
