@@ -33,7 +33,7 @@ export default function Footer() {
                                 <Menu.Items className="absolute right-0 mt-2 w-40 origin-top-right bg-white divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                                     <Menu.Item>
                                         {({ active }) => (
-                                            <Link href="#">
+                                            <Link href="en">
                                                 <a className={`${
                                                     active ? 'bg-gray-100 text-gray-900' : 'text-gray-900'
                                                     } group flex items-center w-full px-2 py-2 text-sm`}>
