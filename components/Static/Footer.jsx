@@ -1,8 +1,15 @@
 import Link from "next/link";
 import { Menu } from '@headlessui/react';
 import { ChevronDownIcon } from '@heroicons/react/solid';
+import { useState } from 'react'; // useState ekleyin
 
 export default function Footer() {
+    const [selectedLanguage, setSelectedLanguage] = useState('tr'); // Dil durumunu ve işlevi ekleyin
+
+    // Dil değiştirme işlevi
+    const handleLanguageChange = (language) => {
+        setSelectedLanguage(language);
+    };
 
     return (
         <>
@@ -14,6 +21,8 @@ export default function Footer() {
                                 <img src="/img/logo2.png" className="rounded-full w-12" />
                                 <p className="font-semibold text-xl text-white">Sukuna Bot</p>
                             </div>
+                            <Menu as="div" className="relative mt-3 inline-block text-left">
+                                <div>
                                     <Menu.Button className="flex z-1 items-center w-full px-4 py-2 text-sm font-medium text-white bg-black rounded-md bg-opacity-20 hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
                                         <img
                                             src={`https://flagcdn.com/w80/${selectedLanguage}.png`}
@@ -33,7 +42,7 @@ export default function Footer() {
                                         {({ active }) => (
                                             <Link href="#">
                                                 <a
-                                                    onClick={() => handleLanguageChange('en')}
+                                                    onClick={() => handleLanguageChange('en')} // Dil değiştirme işlevini çağırın
                                                     className={`${
                                                         active ? 'bg-gray-100 text-gray-900' : 'text-gray-900'
                                                         } group flex items-center w-full px-2 py-2 text-sm`}
@@ -53,7 +62,7 @@ export default function Footer() {
                                         {({ active }) => (
                                             <Link href="#">
                                                 <a
-                                                    onClick={() => handleLanguageChange('tr')}
+                                                    onClick={() => handleLanguageChange('tr')} // Dil değiştirme işlevini çağırın
                                                     className={`${
                                                         active ? 'bg-gray-100 text-gray-900' : 'text-gray-900'
                                                         } group flex items-center w-full px-2 py-2 text-sm`}
@@ -72,7 +81,6 @@ export default function Footer() {
                                 </Menu.Items>
                             </Menu>
                         </div>
-
                         <div className="col-span-1">
                             <p className="text-white font-medium mt-3 sm:mt-0 sm:mb-3">Links</p>
                             <div>
@@ -127,6 +135,7 @@ export default function Footer() {
                                     </a>
                                 </Link>                            
                         </div>
+                    </div>
                     </div>
                     <div className="mt-10 grid content-center grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
                         <p className="text-white text-center sm:text-left text-opacity-50">
