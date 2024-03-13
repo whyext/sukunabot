@@ -41,7 +41,7 @@ Vote</a>
         </div>
       </div>
 
-
+      <iframe src="https://discord.com/widget?id=1194019347979571262&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-y-12 lg:gap-y-0 lg:gap-x-12 py-24">
           <div className="col-span-4">
