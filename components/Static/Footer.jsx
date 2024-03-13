@@ -1,8 +1,14 @@
+import { useState } from 'react';
 import Link from "next/link";
 import { Menu } from '@headlessui/react';
 import { ChevronDownIcon } from '@heroicons/react/solid';
 
 export default function Footer() {
+    const [language, setLanguage] = useState('tr'); // Default language is Turkish ('tr')
+
+    const toggleLanguage = () => {
+        setLanguage(language === 'tr' ? 'en' : 'tr'); // Toggles between 'tr' (Turkish) and 'en' (English)
+    };
 
     return (
         <>
@@ -16,14 +22,14 @@ export default function Footer() {
                             </div>
                             <Menu as="div" className="relative mt-3 inline-block text-left">
                                 <div>
-                                    <Menu.Button className="flex z-1 items-center w-full px-4 py-2 text-sm font-medium text-white bg-black rounded-md bg-opacity-20 hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
+                                    <Menu.Button onClick={toggleLanguage} className="flex z-1 items-center w-full px-4 py-2 text-sm font-medium text-white bg-black rounded-md bg-opacity-20 hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
                                         <img
-                                            src={`https://flagcdn.com/w80/tr.png`}
+                                            src={`https://flagcdn.com/w80/${language}.png`}
                                             width="24"
                                             height="18"
                                             className="mr-2 h-4 rounded-sm"
                                         />
-                                        Türkçe
+                                        {language === 'tr' ? 'Türkçe' : 'English'}
                                         <ChevronDownIcon
                                             className="w-5 h-5 ml-2 -mr-1 transform rotate-180 text-violet-200 hover:text-violet-100"
                                             aria-hidden="true"
@@ -33,22 +39,22 @@ export default function Footer() {
                             </Menu>
                         </div>
                         <div className="col-span-1">
-                            <p className="text-white font-medium mt-3 sm:mt-0 sm:mb-3">Linkler</p>
+                            <p className="text-white font-medium mt-3 sm:mt-0 sm:mb-3">{language === 'tr' ? 'Linkler' : 'Links'}</p>
                             <div>
                                 <Link href="#">
                                     <a className="text-white/50 hover:text-white hover:underline transform duration-200">
-                                    <i className={`fa-brands fa fa-globe`} /> Vote
+                                        <i className={`fa-brands fa fa-globe`} /> {language === 'tr' ? 'Oylama' : 'Vote'}
                                     </a>
                                 </Link>
                             </div>
                             <div>
                                 <a href="https://discord.gg/ZcDprCrFTn" target="_blank" className="text-white/50 hover:text-white hover:underline transform duration-200">
-                                <i className={`fa-brands fa fa-compass`} /> Destek
+                                <i className={`fa-brands fa fa-compass`} /> {language === 'tr' ? 'Destek' : 'Support'}
                                 </a>
                             </div>
                             <div>
                                 <a href="https://discord.com/api/oauth2/authorize?client_id=774043716797071371&permissions=277028620608&scope=applications.commands%20bot" target="_blank" className="text-white/50 hover:text-white hover:underline transform duration-200">
-                                <i className={`fa-brands fa fa-gift`} /> Davet Et
+                                <i className={`fa-brands fa fa-gift`} /> {language === 'tr' ? 'Davet Et' : 'Invite'}
                                 </a>
                             </div>
                         </div>
@@ -100,7 +106,7 @@ export default function Footer() {
                         </p>
                         <div className="hidden md:flex items-center justify-center">
                                 <p className={"text-xs text-green-400"}>
-                                    Bot Aktif
+                                    {language === 'tr' ? 'Bot Aktif' : 'Bot Active'}
                                 </p>
                         </div>
                         <p className="text-white text-center sm:text-right text-opacity-50">
