@@ -10,6 +10,13 @@ export default function Footer() {
         setLanguage(language === 'tr' ? 'en' : 'tr'); // Toggles between 'tr' (Turkish) and 'en' (English)
     };
 
+    // Define a function to get the flag URL based on the language
+    const getFlagUrl = (lang) => {
+        if (lang === 'tr') return 'https://flagcdn.com/w80/tr.png'; // Turkish flag URL
+        else if (lang === 'en') return 'https://flagcdn.com/w80/gb.png'; // English flag URL (GB for United Kingdom)
+        else return ''; // Add support for other languages if needed
+    };
+
     return (
         <>
             <footer className="py-10">
@@ -24,7 +31,7 @@ export default function Footer() {
                                 <div>
                                     <Menu.Button onClick={toggleLanguage} className="flex z-1 items-center w-full px-4 py-2 text-sm font-medium text-white bg-black rounded-md bg-opacity-20 hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
                                         <img
-                                            src={`https://flagcdn.com/w80/${language}.png`}
+                                            src={getFlagUrl(language)}
                                             width="24"
                                             height="18"
                                             className="mr-2 h-4 rounded-sm"
