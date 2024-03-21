@@ -90,7 +90,7 @@ Vote</a>
                   <p className="text-3xl text-white font-semibold">Botunuzu En İyi Şekilde Kullanın</p>
                   <p className="text-md text-white font-medium text-gray-500 line-clamp-5">En iyi ve en güncel robot olan SukunaBot ile en iyi partileri düzenlemeye hazır mısınız?</p>
                 </div>
-                <img src="https://media1.tenor.com/m/6NCQTCN4COYAAAAd/sukuna-jogo.gif" className="hidden lg:block rounded-xl perspective-right shadow-xl shadow-black" />
+                <img src="https://media1.tenor.com/m/4ARQ4chvUXEAAAAd/gojo-sukuna.gif" className="hidden lg:block rounded-xl perspective-right shadow-xl shadow-black" />
               </>
       
         </div>
