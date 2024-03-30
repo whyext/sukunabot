@@ -88,5 +88,6 @@ export default function AwardApp({ Component, pageProps }) {
       </div>
     </div>
     </ThemeProvider>
+   <meta name="google-site-verification" content="m14QxFBpC_ICSL-rzkuFHNfEqQ8O5d_4PyIVGCx0bmg" />
   );
 }
