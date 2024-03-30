@@ -31,7 +31,7 @@ const Sitemap = () => {
   ];
 
   return (
-    <urlset>
+    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
       {/* created with Free Online Sitemap Generator www.xml-sitemaps.com */}
       {urls.map((url, index) => (
         <url key={index}>
@@ -45,3 +45,4 @@ const Sitemap = () => {
 }
 
 export default Sitemap;
+
