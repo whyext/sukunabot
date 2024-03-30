@@ -1,38 +1,44 @@
 import React from 'react';
 
 const Sitemap = () => {
+  const urls = [
+    {
+      loc: 'https://sukunabot.vercel.app/',
+      lastmod: '2024-03-30T10:45:50+00:00',
+      priority: 1.00
+    },
+    {
+      loc: 'https://sukunabot.vercel.app/commands',
+      lastmod: '2024-03-30T10:45:50+00:00',
+      priority: 0.80
+    },
+    {
+      loc: 'https://sukunabot.vercel.app/partners',
+      lastmod: '2024-03-30T10:45:50+00:00',
+      priority: 0.80
+    },
+    {
+      loc: 'https://sukunabot.vercel.app/tos',
+      lastmod: '2024-03-30T10:45:50+00:00',
+      priority: 0.80
+    },
+    {
+      loc: 'https://sukunabot.vercel.app/privacy',
+      lastmod: '2024-03-30T10:45:50+00:00',
+      priority: 0.80
+    }
+  ];
+
   return (
-    <urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+    <urlset>
       {/* created with Free Online Sitemap Generator www.xml-sitemaps.com */}
-      <url>
-        <loc>https://sukunabot.vercel.app/</loc>
-        <lastmod>2024-03-30T10:45:50+00:00</lastmod>
-        <priority>1.00</priority>
-      </url>
-      <url>
-        <loc>https://sukunabot.vercel.app/commands</loc>
-        <lastmod>2024-03-30T10:45:50+00:00</lastmod>
-        <priority>0.80</priority>
-      </url>
-      <url>
-        <loc>https://sukunabot.vercel.app/partners</loc>
-        <lastmod>2024-03-30T10:45:50+00:00</lastmod>
-        <priority>0.80</priority>
-      </url>
-      <url>
-        <loc>https://sukunabot.vercel.app/tos</loc>
-        <lastmod>2024-03-30T10:45:50+00:00</lastmod>
-        <priority>0.80</priority>
-      </url>
-      <url>
-        <loc>https://sukunabot.vercel.app/privacy</loc>
-        <lastmod>2024-03-30T10:45:50+00:00</lastmod>
-        <priority>0.80</priority>
-      </url>
+      {urls.map((url, index) => (
+        <url key={index}>
+          <loc>{url.loc}</loc>
+          <lastmod>{url.lastmod}</lastmod>
+          <priority>{url.priority}</priority>
+        </url>
+      ))}
     </urlset>
   );
 }
