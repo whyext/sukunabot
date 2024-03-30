@@ -73,6 +73,7 @@ export default function AwardApp({ Component, pageProps }) {
         <title>
           Sukuna Bot
         </title>
+        <meta name="google-site-verification" content="m14QxFBpC_ICSL-rzkuFHNfEqQ8O5d_4PyIVGCx0bmg" />
       </Head>
       <main className="transition-all duration-200 z-10 absolute inset-0 px-5 h-screen max-w-7xl w-full mx-auto">
         <Header NavItems={NavItems} />
@@ -88,6 +89,5 @@ export default function AwardApp({ Component, pageProps }) {
       </div>
     </div>
     </ThemeProvider>
-   <meta name="google-site-verification" content="m14QxFBpC_ICSL-rzkuFHNfEqQ8O5d_4PyIVGCx0bmg" />
   );
 }
