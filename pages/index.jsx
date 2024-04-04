@@ -26,7 +26,7 @@ export default function Index() {
           Davet et
               </a>
             </Link>
-  <div className="py-11"></div>
+  <div className="py-10"></div>
   <Link href={"#"}>
   <a className={" px-6 justify-center gap-x-2 shadow-lg shadow-amber-600/20 rounded-xl py-4 font-medium bg-gradient-to-bl from-amber-700 to-amber-500 hover:opacity-80 transition duration-200 text-white " }>
 Vote</a>
@@ -34,7 +34,7 @@ Vote</a>
         </div>
 <div className="py-10">
   <Link href="#">
-    <a className="px-7 justify-center gap-x-2 shadow-lg shadow-amber-600/20 rounded-xl py-4 font-medium bg-gradient-to-bl from-amber-700 to-amber-500 hover:opacity-80 transition duration-200 text-white control-panel-link">
+    <a className=" px-6 justify-center gap-x-2 shadow-lg shadow-amber-600/20 rounded-xl py-4 font-medium bg-gradient-to-bl from-amber-700 to-amber-500 hover:opacity-80 transition duration-200 text-white ">
       Kontrol Paneli
     </a>
   </Link>
