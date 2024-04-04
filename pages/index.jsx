@@ -32,9 +32,9 @@ export default function Index() {
 Vote</a>
   </Link>
         </div>
-<div className="py-10">
+<div className="py-5">
   <Link href="#">
-    <a className=" px-6 justify-center gap-x-2 shadow-lg shadow-amber-600/20 rounded-xl py-4 font-medium bg-gradient-to-bl from-amber-700 to-amber-500 hover:opacity-80 transition duration-200 text-white ">
+    <a className=" px-2 justify-center gap-x-4 shadow-lg shadow-amber-600/20 rounded-xl py-8 font-medium bg-gradient-to-bl from-amber-700 to-amber-500 hover:opacity-80 transition duration-200 text-white ">
       Kontrol Paneli
     </a>
   </Link>
